@@ -10,6 +10,9 @@ Object.defineProperty(
     writable: false,
     enumerable: false,
     configurable: false,
+    /**
+     * Cleans all settings properties without saving
+     */
     value: function() {
       for (var property in this) {
         if (this.hasOwnProperty(property)) {
@@ -27,6 +30,11 @@ Object.defineProperty(
     writable: false,
     enumerable: false,
     configurable: false,
+    /**
+     * Sets all object properties to same in settings without cleaning and saving
+     *
+     * @param {Object} settings
+     */
     value: function(settings) {
       for (var property in settings) {
         if (!settings.hasOwnProperty(property)) {
@@ -45,6 +53,12 @@ Object.defineProperty(
     writable: false,
     enumerable: false,
     configurable: false,
+    /**
+     * Asynchronously loads object from JSON file
+     *
+     * @param {String} [file]
+     * @param {Function} callback
+     */
     value: function(file, callback) {
       if (file) {
         _file = file;
@@ -52,10 +66,10 @@ Object.defineProperty(
       this._clean();
       jf.readFile(_file, function(err, settings) {
         if (err) {
-          return callback(err);
+          return callback(err, null);
         }
         this._set(settings);
-        callback(null);
+        callback(null, this);
       });
     }
   }
@@ -68,6 +82,12 @@ Object.defineProperty(
     writable: false,
     enumerable: false,
     configurable: false,
+    /**
+     * Synchronously loads object from JSON file
+     *
+     * @param {String} [file]
+     * @returns {Object}
+     */
     value: function(file) {
       if (file) {
         _file = file;
@@ -75,6 +95,7 @@ Object.defineProperty(
       this._clean();
       var settings = jf.readFileSync(_file);
       this._set(settings);
+      return this;
     }
   }
 );
@@ -86,6 +107,12 @@ Object.defineProperty(
     writable: false,
     enumerable: false,
     configurable: false,
+    /**
+     * Asynchronously saves object to JSON file
+     *
+     * @param {String} [file]
+     * @param {Function} callback
+     */
     value: function(file, callback) {
       if (file) {
         _file = file;
@@ -102,6 +129,11 @@ Object.defineProperty(
     writable: false,
     enumerable: false,
     configurable: false,
+    /**
+     * Synchronously saves object to JSON file
+     *
+     * @param {String} [file]
+     */
     value: function(file) {
       if (file) {
         _file = file;

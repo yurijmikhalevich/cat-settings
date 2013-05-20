@@ -14,8 +14,7 @@ $ npm install cat-settings
 Example:
 
 ```javascript
-var settings = require('cat-settings');
-settings.loadSync(__dirname + '/settings.json');
+var settings = require('cat-settings').loadSync(__dirname + '/settings.json');
 
 // You may also use async load if it makes sense
 settings.load(null, function(err) {
