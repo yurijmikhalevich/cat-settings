@@ -60,6 +60,7 @@ Object.defineProperty(
      * @param {Function} callback
      */
     value: function(file, callback) {
+      var that = this;
       if (file) {
         _file = file;
       }
@@ -68,8 +69,8 @@ Object.defineProperty(
         if (err) {
           return callback(err, null);
         }
-        this._set(settings);
-        callback(null, this);
+        that._set(settings);
+        callback(null, that);
       });
     }
   }
