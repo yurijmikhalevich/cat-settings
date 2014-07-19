@@ -1,5 +1,5 @@
 /**
- * @license GPLv3
+ * @license GPL-3.0+
  * @author 0@39.yt (Yurij Mikhalevich)
  */
 var jf = require('jsonfile');
@@ -35,8 +35,8 @@ Object.defineProperty(
     enumerable: false,
     configurable: false,
     /**
-     * Sets all object properties to same in settings without cleaning and saving
-     *
+     * Sets all object properties to same in settings without cleaning and
+     * saving
      * @param {Object} settings
      */
     value: function(settings) {
@@ -59,7 +59,6 @@ Object.defineProperty(
     configurable: false,
     /**
      * Asynchronously loads object from JSON file
-     *
      * @param {String} [file]
      * @param {Function} callback
      */
@@ -89,7 +88,6 @@ Object.defineProperty(
     configurable: false,
     /**
      * Synchronously loads object from JSON file
-     *
      * @param {String} [file]
      * @returns {Object}
      */
@@ -114,7 +112,6 @@ Object.defineProperty(
     configurable: false,
     /**
      * Asynchronously saves object to JSON file
-     *
      * @param {String} [file]
      * @param {Function} callback
      */
@@ -136,7 +133,6 @@ Object.defineProperty(
     configurable: false,
     /**
      * Synchronously saves object to JSON file
-     *
      * @param {String} [file]
      */
     value: function(file) {
