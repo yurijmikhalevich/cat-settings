@@ -1,7 +1,7 @@
 {
   "name": "cat-settings",
   "description": "Provides simple API to access and modify application settings, stored in JSON-file",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "dependencies": {
     "jsonfile": "*"
   },
@@ -12,12 +12,11 @@
   "keywords": [
     "json",
     "jsonfile",
-    "settings",
-    "json settings"
+    "settings"
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/cat-corporation/cat-settings"
+    "url": "git://github.com/39dotyt/cat-settings"
   },
   "main": "index",
   "readmeFilename": "README.md"

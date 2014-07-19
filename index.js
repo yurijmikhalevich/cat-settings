@@ -1,5 +1,5 @@
-var jf = require('jsonfile')
-  , _file;
+var jf = require('jsonfile');
+var _file;
 
 module.exports = {};
 
