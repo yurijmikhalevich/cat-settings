@@ -1,8 +1,8 @@
 {
   "name": "cat-settings",
   "description": "Provides simple API to access and modify application settings, stored in JSON-file",
-  "license": "GPL-3.0+",
-  "version": "1.0.3",
+  "license": "MIT",
+  "version": "1.0.4",
   "dependencies": {
     "jsonfile": "*"
   },
